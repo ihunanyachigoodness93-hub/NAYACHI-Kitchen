@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FFF7ED;
+    color: #2B1812;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f9f8f8;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(43, 24, 18, 0.10);
+}
+
+/* RESTAURANT BRANDING */
+
+.restaurant-info {
+    background: linear-gradient(145deg, #70320e, #F48C06);
+    color: #FFFFFF;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.brand h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.brand h2 span {
+    color: #FFF0D9;
+}
+
+.welcome-text {
+    max-width: 400px;
+}
+
+.subtitle {
+    color: #FFF0D9;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.welcome-text h1 {
+    font-family: Georgia, serif;
+    font-size: 43px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.welcome-text > p:last-child {
+    color: #FFF7ED;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.restaurant-footer {
+    color: #FFF0D9;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* LOGIN FORM */
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px;
+}
+
+.login-form-container {
+    width: 100%;
+    max-width: 370px;
+}
+
+.small-heading {
+    color: #70320e;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.login-form-container h2 {
+    font-family: Georgia, serif;
+    font-size: 31px;
+    margin-bottom: 10px;
+    color: #2B1812;
+}
+
+.description {
+    color: #81736B;
+    font-size: 14px;
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 49px;
+    padding: 0 15px;
+    border: 1px solid #E8D9C9;
+    border-radius: 8px;
+    outline: none;
+    font-size: 13px;
+    background: #FFFCF8;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color:#70320e;
+    box-shadow: 0 0 0 3px rgba(232, 93, 4, 0.12);
+}
+
+.form-group input::placeholder {
+    color: #A89B91;
+}
+
+/* FORM OPTIONS */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0 25px;
+    font-size: 12px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #81736B;
+}
+
+.remember input {
+    accent-color: #70320e;
+}
+
+.form-options a,
+.signup-text a,
+.terms a {
+    color:#70320e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-options a:hover,
+.signup-text a:hover,
+.terms a:hover {
+    color: #70320e;
+    text-decoration: underline;
+}
+
+/* SIGN IN BUTTON */
+
+.login-button {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90deg, #431a05, #e3702d);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background: #c06937;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(232, 93, 4, 0.20);
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* DIVIDER */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 27px 0;
+    color: #A89B91;
+    font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #EFE5DB;
+}
+
+.signup-text {
+    text-align: center;
+    font-size: 13px;
+    color: #81736B;
+}
+
+.terms {
+    margin-top: 35px;
+    text-align: center;
+    color: #A89B91;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 750px) {
+    body {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .login-container {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: auto;
+    }
+
+    .restaurant-info {
+        padding: 30px;
+        min-height: 300px;
+    }
+
+    .welcome-text {
+        margin: 45px 0 35px;
+    }
+
+    .welcome-text h1 {
+        font-size: 32px;
+    }
+
+    .welcome-text > p:last-child {
+        font-size: 13px;
+    }
+
+    .restaurant-footer {
+        font-size: 11px;
+    }
+
+    .login-section {
+        padding: 35px 25px;
+    }
+
+    .login-form-container h2 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 360px) {
+    .restaurant-info {
+        padding: 22px;
+    }
+
+    .brand h2 {
+        font-size: 17px;
+    }
+
+    .login-section {
+        padding: 30px 18px;
+    }
+
+    .form-options {
+        flex-wrap: wrap;
+    }
+}
+/* Floating orange bubbles */
+.restaurant-info {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.restaurant-info::before,
+.restaurant-info::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.10);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.restaurant-info::before {
+    width: 180px;
+    height: 180px;
+    top: 15%;
+    right: -60px;
+    animation: floatBubble 7s ease-in-out infinite;
+}
+
+.restaurant-info::after {
+    width: 110px;
+    height: 110px;
+    bottom: 10%;
+    right: 25%;
+    animation: floatBubble 5s ease-in-out infinite reverse;
+}
+
+@keyframes floatBubble {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(15deg);
+    }
+}
+
+
+
+.login-container {
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .login-container {
+        will-change: auto;
+    }
+}

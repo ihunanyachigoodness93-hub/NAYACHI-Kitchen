@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAYACHI KITCHEN | Meal Details</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <script>
+        emailjs.init({
+            publicKey: "zzpLUPxxbQHzckRIx"
+
+        });
+    </script>
+
+
+
+</head>
+
+<body style="margin:0; font-family:Arial, sans-serif; background:#fffaf5; color:#2b211c;">
+
+    <!-- NAVBAR -->
+    <nav
+        style="background:linear-gradient(135deg,#24140f,#8f2d0f); padding:18px 6%; display:flex; align-items:center; justify-content:space-between; color:white;">
+        <h2 style="margin:0; color:#ff9d32; letter-spacing:1px;">🍴 NAYACHI</h2>
+
+        <div>
+            <a href="index.html" style="color:white; text-decoration:none; margin:0 12px;">Home</a>
+            <a href="index.html#menu" style="color:white; text-decoration:none; margin:0 12px;">Menu</a>
+            <a href="index.html#about" style="color:white; text-decoration:none; margin:0 12px;">About</a>
+            <a href="index.html#location" style="color:white; text-decoration:none; margin:0 12px;">Location</a>
+        </div>
+    </nav>
+
+    <!-- BACK -->
+    <div style="padding:30px 6% 0;">
+        <a href="index.html#menu" style="color:#f47b20; text-decoration:none; font-weight:bold;">← Back to Menu</a>
+    </div>
+
+    <!-- DETAILS -->
+    <div style="display:flex; flex-wrap:wrap; gap:50px; padding:40px 6% 80px; align-items:center;">
+
+        <div style="flex:1; min-width:300px;">
+            <img id="mealImage" src="" alt="Meal"
+                style="width:100%; height:450px; object-fit:cover; border-radius:20px; box-shadow:0 8px 25px rgba(0,0,0,.15);">
+        </div>
+
+        <div style="flex:1; min-width:300px;">
+            <p style="color:#f47b20; font-weight:bold;">NAYACHI SPECIAL</p>
+
+            <h1 id="mealName" style="font-size:42px; margin:10px 0;"></h1>
+
+            <h2 id="mealPrice" style="color:#f05a16; font-size:28px;"></h2>
+
+            <p id="mealDescription" style="font-size:17px; color:#665851; line-height:1.8;"></p>
+
+            <h3>What's Included</h3>
+
+            <ul id="mealIngredients" style="padding-left:20px; line-height:2; color:#51443e;"></ul>
+
+            <div style="margin-top:25px;">
+                <label style="font-weight:bold;">Quantity:</label>
+
+                <div style="display:flex; align-items:center; gap:15px; margin-top:10px;">
+                    <button onclick="changeQuantity(-1)"
+                        style="width:40px; height:40px; border:1px solid #ddd; background:white; border-radius:8px; cursor:pointer;">−</button>
+
+                    <span id="quantity" style="font-size:20px; font-weight:bold;">1</span>
+
+                    <button onclick="changeQuantity(1)"
+                        style="width:40px; height:40px; border:1px solid #ddd; background:white; border-radius:8px; cursor:pointer;">+</button>
+                </div>
+            </div>
+
+            <button onclick="orderMeal()"
+                style="margin-top:25px; background:#f47b20; color:white; border:0; padding:15px 30px; border-radius:8px; font-weight:bold; font-size:16px; cursor:pointer;">
+                🛒 Add to Order
+            </button>
+
+            <button onclick="window.location.href='index.html#menu'"
+                style="margin-top:25px; margin-left:10px; background:white; color:#f47b20; border:2px solid #f47b20; padding:13px 28px; border-radius:8px; font-weight:bold; font-size:16px; cursor:pointer;">
+                Continue Shopping
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="background:#24140f; color:white; text-align:center; padding:25px;">
+        <p style="margin:0;">© 2026 NAYACHI KITCHEN. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const meals = {
+            jollof: {
+                name: "Jollof Rice & Chicken",
+                price: 4500,
+                image: "images/for jellof.jpeg",
+                description: "Our delicious Nigerian-style jollof rice is cooked with rich tomato sauce, spices and served with perfectly grilled chicken.",
+                ingredients: ["Well-seasoned Jollof Rice", "Grilled Chicken", "Fried Plantain", "Fresh Salad"]
+            },
+
+            peppersoup: {
+                name: "Pepper Soup",
+                price: 3500,
+                image: "images/for peeppersoup.jpeg",
+                description: "A hot, spicy and aromatic Nigerian pepper soup prepared with fresh ingredients and traditional spices.",
+                ingredients: ["Tender Meat", "Pepper Soup Spices", "Fresh Pepper", "Onions", "Aromatic Herbs"]
+            },
+
+            pasta: {
+                name: "Creamy Chicken Pasta",
+                price: 4000,
+                image: "images/for pasta.jpeg",
+                description: "Creamy pasta tossed in a rich sauce and served with tender grilled chicken for a satisfying meal.",
+                ingredients: ["Creamy Pasta", "Grilled Chicken", "Vegetables", "Special Sauce", "Herbs"]
+            },
+
+            friedrice: {
+                name: "Special Fried Rice",
+                price: 3800,
+                image: "images/for fried rice.jpeg",
+                description: "Freshly prepared fried rice packed with vegetables, tasty spices and tender chicken.",
+                ingredients: ["Fried Rice", "Mixed Vegetables", "Chicken", "Sweet Corn", "Special Seasoning"]
+            },
+            yamsauce: {
+                name: "mulky cake",
+                price: 3800,
+                image: "images/5.jfif",
+                description: ">mulky cake served with exceptional sweet & buttered icing.",
+                ingredients: ["yam sauce", "Mixed egg", "tomatoes", "pepper", "Special Seasoning"]
+            },
+
+            yamsauce: {
+                name: "Special yam sauce",
+                price: 3800,
+                image: "images/for egg sauce.jpeg",
+                description: "Freshly prepared fried rice packed with vegetables, tasty spices and tender chicken.",
+                ingredients: ["yam sauce", "Mixed egg", "tomatoes", "pepper", "Special Seasoning"]
+            }
+        };
+
+        let quantity = 1;
+        const selectedMeal = localStorage.getItem("selectedMeal");
+
+        if (!selectedMeal || !meals[selectedMeal]) {
+            window.location.href = "index.html";
+        }
+
+        const meal = meals[selectedMeal];
+
+        document.getElementById("mealName").textContent = meal.name;
+        document.getElementById("mealPrice").textContent = "₦" + meal.price.toLocaleString();
+        document.getElementById("mealDescription").textContent = meal.description;
+        document.getElementById("mealImage").src = meal.image;
+        document.getElementById("mealImage").alt = meal.name;
+
+        const ingredientsList = document.getElementById("mealIngredients");
+
+        meal.ingredients.forEach(function (item) {
+            const li = document.createElement("li");
+            li.textContent = "✓ " + item;
+            ingredientsList.appendChild(li);
+        });
+
+        function changeQuantity(amount) {
+            quantity += amount;
+
+            if (quantity < 1) {
+                quantity = 1;
+            }
+
+            document.getElementById("quantity").textContent = quantity;
+        }
+        function orderMeal() {
+
+            const total = meal.price * quantity;
+
+            const templateParams = {
+                meal_name: meal.name,
+                quantity: quantity,
+                price: "₦" + meal.price.toLocaleString(),
+                total: "₦" + total.toLocaleString()
+            };
+
+            emailjs.send(
+                "service_67vq8vd",
+                "template_uieg2cl",
+                templateParams
+            )
+                .then(function (response) {
+
+                    alert(
+                        "Order received successfully! 🎉\n\n" +
+                        meal.name +
+                        "\nQuantity: " + quantity +
+                        "\nTotal: ₦" + total.toLocaleString()
+                    );
+
+                    console.log("Email sent:", response);
+
+                })
+                .catch(function (error) {
+
+                    alert("Sorry, your order could not be sent. Please try again.");
+
+                    console.log("EmailJS error:", error);
+
+                });
+        }
+
+    </script>
+
+</body>
+
+</html> 

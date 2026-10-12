@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAYACHI KITCHEN | Home</title>
+</head>
+
+<body style="margin:0; font-family:Arial, sans-serif; background:#fffaf5; color:#2b211c;">
+
+    <!-- NAVBAR -->
+    <nav
+        style="background:linear-gradient(135deg,#24140f,#8f2d0f); padding:18px 6%; display:flex; align-items:center; justify-content:space-between; color:white;">
+        <h2 style="margin:0; color:#ff9d32; letter-spacing:1px;">🍴 NAYACHI</h2>
+
+        <div>
+            <a href="index.html" style="color:white; text-decoration:none; margin:0 12px;">Home</a>
+            <a href="#menu" style="color:white; text-decoration:none; margin:0 12px;">Menu</a>
+            <a href="#about" style="color:white; text-decoration:none; margin:0 12px;">About</a>
+            <a href="#location" style="color:white; text-decoration:none; margin:0 12px;">Location</a>
+        </div>
+
+        <a href="#menu"
+            style="background:#ff8a00; color:white; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:bold;">Order
+            Now</a>
+    </nav>
+
+    <!-- HERO -->
+    <div
+        style="display:flex; flex-wrap:wrap; align-items:center; min-height:500px; background:linear-gradient(135deg,#fff7ef,#ffe0bd);">
+
+        <div style="flex:1; min-width:300px; padding:60px 6%; box-sizing:border-box;">
+            <p style="color:#f06b16; font-size:24px; font-style:italic; margin-bottom:10px;">Delicious</p>
+
+            <h1 style="font-size:55px; margin:0 0 20px; line-height:1.05;">
+                Food Made<br>
+                <span style="color:#f47b20;">With Love</span>
+            </h1>
+
+            <p style="font-size:18px; line-height:1.7; max-width:520px; color:#5d5049;">
+                Enjoy delicious meals prepared with fresh ingredients and lots of love.
+                Click any meal below to view its full details.
+            </p>
+
+            <a href="#menu"
+                style="display:inline-block; margin-top:20px; background:#f47b20; color:white; padding:15px 28px; border-radius:8px; text-decoration:none; font-weight:bold;">
+                Explore Menu
+            </a>
+        </div>
+
+        <div style="flex:1; min-width:300px;">
+            <img src="images/for fried rice.jpeg" alt="Delicious fried rice"
+                style="width:100%; height:500px; object-fit:cover;">
+        </div>
+    </div>
+
+    <!-- MENU -->
+    <div id="menu" style="padding:70px 6%;">
+        <div style="text-align:center; margin-bottom:40px;">
+            <p style="color:#f47b20; font-weight:bold; margin:0;">OUR MENU</p>
+            <h2 style="font-size:38px; margin:10px 0;">Popular Dishes</h2>
+            <p style="color:#766861;">Click on any food to see more details.</p>
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:25px; justify-content:center;">
+
+            <!-- JOLLOF -->
+            <div onclick="openMeal('jollof')"
+                style="width:270px; background:white; border-radius:15px; overflow:hidden; box-shadow:0 5px 20px rgba(0,0,0,.12); cursor:pointer; transition:transform .2s;"
+                onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="images/for jellof.jpeg" alt="Jollof Rice and Chicken"
+                    style="width:100%; height:190px; object-fit:cover;">
+                <div style="padding:20px;">
+                    <h3 style="margin:0 0 8px;">Jollof Rice & Chicken</h3>
+                    <p style="color:#766861; line-height:1.5;">Classic Nigerian jollof rice served with grilled chicken.
+                    </p>
+                    <strong style="color:#f05a16; font-size:20px;">₦4,500</strong>
+                </div>
+            </div>
+
+            <!-- PEPPER SOUP -->
+            <div onclick="openMeal('peppersoup')"
+                style="width:270px; background:white; border-radius:15px; overflow:hidden; box-shadow:0 5px 20px rgba(0,0,0,.12); cursor:pointer; transition:transform .2s;"
+                onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="images/for peeppersoup.jpeg" alt="Pepper soup"
+                    style="width:100%; height:190px; object-fit:cover;">
+                <div style="padding:20px;">
+                    <h3 style="margin:0 0 8px;">Pepper Soup</h3>
+                    <p style="color:#766861; line-height:1.5;">Spicy and aromatic Nigerian pepper soup.</p>
+                    <strong style="color:#f05a16; font-size:20px;">₦3,500</strong>
+                </div>
+            </div>
+
+            <!-- PASTA -->
+            <div onclick="openMeal('pasta')"
+                style="width:270px; background:white; border-radius:15px; overflow:hidden; box-shadow:0 5px 20px rgba(0,0,0,.12); cursor:pointer; transition:transform .2s;"
+                onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="images/for pasta.jpeg" alt="Creamy pasta" style="width:100%; height:190px; object-fit:cover;">
+                <div style="padding:20px;">
+                    <h3 style="margin:0 0 8px;">Creamy Chicken Pasta</h3>
+                    <p style="color:#766861; line-height:1.5;">Creamy pasta served with tender grilled chicken.</p>
+                    <strong style="color:#f05a16; font-size:20px;">₦4,000</strong>
+                </div>
+            </div>
+
+            <!-- FRIED RICE -->
+            <div onclick="openMeal('friedrice')"
+                style="width:270px; background:white; border-radius:15px; overflow:hidden; box-shadow:0 5px 20px rgba(0,0,0,.12); cursor:pointer; transition:transform .2s;"
+                onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="images/for fried rice.jpeg" alt="Fried rice"
+                    style="width:100%; height:190px; object-fit:cover;">
+                <div style="padding:20px;">
+                    <h3 style="margin:0 0 8px;">Special Fried Rice</h3>
+                    <p style="color:#766861; line-height:1.5;">Special fried rice with vegetables and chicken.</p>
+                    <strong style="color:#f05a16; font-size:20px;">₦3,800</strong>
+                </div>
+            </div>
+            <div onclick="openMeal('cake')"
+                style="width:270px; background:white; border-radius:15px; overflow:hidden; box-shadow:0 5px 20px rgba(0,0,0,.12); cursor:pointer; transition:transform .2s;"
+                onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="images/5.jfif" alt="yummy cake" style="width:100%; height:190px; object-fit:cover;">
+                <div style="padding:20px;">
+                    <h3 style="margin:0 0 8px;">fluffy cake</h3>
+                    <p style="color:#766861; line-height:1.5;">mulky cake served with exceptional sweet icing.</p>
+                    <strong style="color:#f05a16; font-size:20px;">₦3,000</strong>
+                </div>
+            </div>
+
+            <div onclick="openMeal('yamsauce')"
+                style="width:270px; background:white; border-radius:15px; overflow:hidden; box-shadow:0 5px 20px rgba(0,0,0,.12); cursor:pointer; transition:transform .2s;"
+                onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="images/for egg sauce.jpeg" alt="egg sauce"
+                    style="width:100%; height:190px; object-fit:cover;">
+                <div style="padding:20px;">
+                    <h3 style="margin:0 0 8px;">tasty egg sauce</h3>
+                    <p style="color:#766861; line-height:1.5;">Special yam sauce vegetables and egg.</p>
+                    <strong style="color:#f05a16; font-size:20px;">₦3,800</strong>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" style="padding:60px 6%; background:#2b1710; color:white; text-align:center;">
+        <h2 style="font-size:34px;">About NAYACHI KITCHEN</h2>
+        <p style="max-width:750px; margin:auto; line-height:1.8; color:#eadbd2;">
+            At NAYACHI KITCHEN, we serve tasty meals made with fresh ingredients.
+            Whether you want a quick lunch, family dinner or a special treat,
+            we are ready to serve you.
+        </p>
+    </div>
+
+    <!-- LOCATION -->
+    <div id="location" style="padding:70px 6%;">
+        <h2 style="font-size:35px; margin-bottom:10px;">Find Us</h2>
+        <p style="color:#6b5b53; margin-bottom:25px;">Visit NAYACHI KITCHEN and enjoy a delicious meal.</p>
+
+        <div style="display:flex; flex-wrap:wrap; gap:30px; align-items:stretch;">
+            <div style="flex:1; min-width:280px; padding:30px; background:#fff3e7; border-radius:15px;">
+                <h3 style="color:#f47b20;">📍 NAYACHI KITCHEN</h3>
+                <p style="line-height:1.8;">
+                    123 Food Street,<br>
+                    Flavor City, Lagos, Nigeria
+                </p>
+                <p>📞 08160306389</p>
+                <p>🕘 Mon - Sun: 9:00 AM - 9:00 PM</p>
+            </div>
+
+            <div style="flex:2; min-width:300px;">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=3.34%2C6.48%2C3.42%2C6.56&layer=mapnik"
+                    style="width:100%; height:350px; border:0; border-radius:15px;" title="NAYACHI KITCHEN map">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="background:#24140f; color:white; text-align:center; padding:25px;">
+        <p style="margin:0;">© 2026 NAYACHI KITCHEN. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function openMeal(meal) {
+            localStorage.setItem("selectedMeal", meal);
+            window.location.href = "details.html";
+        }
+    </script>
+
+</body>
+
+</html>

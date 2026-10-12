@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NAYACHI Kitchen | Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <section class="restaurant-info">
+            <div class="brand">
+                <span class="brand-icon">N</span>
+                <h2>NAYACHI <span>Kitchen</span></h2>
+            </div>
+
+            <div class="welcome-text">
+                <p class="subtitle">WELCOME TO</p>
+
+                <h1>Good Food.<br>
+                    Great Moments.</h1>
+
+                <p>
+                    Sign in to discover delicious meals,
+                    explore our menu, and enjoy a wonderful
+                    dining experience with NAYACHI Kitchen.
+                </p>
+            </div>
+
+            <p class="restaurant-footer">
+                Freshly prepared. Beautifully served.
+            </p>
+        </section>
+
+
+        <section class="login-section">
+
+            <div class="login-form-container">
+
+                <p class="small-heading">YOUR TABLE AWAITS</p>
+
+                <h2>Welcome Back!</h2>
+
+                <p class="description">
+                    Please enter your details to sign in.
+                </p>
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+
+                        <input type="email" id="email" placeholder="Enter your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+
+                        <input type="password" id="password" placeholder="Enter your password" required minlength="6">
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember">
+                            <input type="checkbox" id="remember">
+                            Remember me
+                        </label>
+
+                        <a href="#" id="forgotPassword">
+                            Forgot password?
+                        </a>
+                    </div>
+
+                    <button type="submit" class="login-button">
+                        Sign In
+                    </button>
+
+                    <p id="message" role="status"></p>
+
+                </form>
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <p class="signup-text">
+                    Don't have an account?
+                    <a href="#" id="signupLink">Create account</a>
+                </p>
+
+                <p class="terms">
+                    By continuing, you agree to our
+                    <a href="#">Terms of Service</a>
+                    and
+                    <a href="#">Privacy Policy</a>.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
